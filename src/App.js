@@ -8,6 +8,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
+import HomeIcon from "@material-ui/icons/Home";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import { Link } from "@material-ui/core";
 
 import darkImage from "./dark.jpg";
 
@@ -37,7 +40,7 @@ function App() {
   const options = {
     chart: {
       type: "networkgraph",
-      height: "50%",
+      height: "100%",
       backgroundColor: "transparent",
     },
     title: {
@@ -138,11 +141,22 @@ function App() {
     }
   });
 
-  console.log(url);
-
   return (
     <div className="App">
-      <img src={darkImage} class="Header-image" alt="Dark" />
+      <header>
+        <img src={darkImage} class="Header-image" alt="Dark" />
+        <div>
+          <Link href="https://www.saitama.solutions">
+            <HomeIcon style={{ color: "white", margin: 20, fontSize: 30 }} />
+          </Link>
+          <Link
+            href="https://github.com/saitama-solutions/dark-series-character-network"
+            target="_"
+          >
+            <GitHubIcon style={{ color: "white", margin: 20, fontSize: 30 }} />
+          </Link>
+        </div>
+      </header>
       <div>
         <Modal
           aria-labelledby="transition-modal-title"
