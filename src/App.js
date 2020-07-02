@@ -40,7 +40,7 @@ function App() {
   const options = {
     chart: {
       type: "networkgraph",
-      height: "100%",
+      height: "70%",
       backgroundColor: "transparent",
     },
     title: {
