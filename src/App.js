@@ -9,6 +9,8 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 
+import darkImage from "./dark.jpg";
+
 import { graphData, characterUrl } from "./data";
 
 const useStyles = makeStyles((theme) => ({
@@ -39,13 +41,10 @@ function App() {
       backgroundColor: "transparent",
     },
     title: {
-      text: "Dark Family Web",
-      style: { color: "white" },
-    },
-    subtitle: {
       text: "An interactive web of the family tree",
       style: { color: "white" },
     },
+
     plotOptions: {
       networkgraph: {
         keys: ["from", "to"],
@@ -143,6 +142,7 @@ function App() {
 
   return (
     <div className="App">
+      <img src={darkImage} class="Header-image" alt="Dark" />
       <div>
         <Modal
           aria-labelledby="transition-modal-title"
