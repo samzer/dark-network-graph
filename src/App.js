@@ -74,6 +74,7 @@ function App() {
       },
     ],
     credits: false,
+    tooltip: { enabled: false },
   };
 
   const handleOpen = (character) => {
